@@ -14,7 +14,7 @@ body {
 header {
     background-color: #1e293b;
     color: white;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 }
 
@@ -47,7 +47,7 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* Card Design */
+/* Card */
 .card {
     background: white;
     padding: 20px;
@@ -55,13 +55,19 @@ h2 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* Text spacing */
+.card p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
 /* Skills */
 .skills span {
     display: inline-block;
     background: #2563eb;
     color: white;
-    padding: 8px 12px;
-    margin: 5px;
+    padding: 8px 14px;
+    margin: 6px;
     border-radius: 20px;
     font-size: 14px;
 }
