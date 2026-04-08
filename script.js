@@ -9,8 +9,10 @@ function typeEffect() {
     }
 }
 
+// Select all sections
 const sections = document.querySelectorAll("section");
 
+// Scroll animation
 window.addEventListener("scroll", () => {
     sections.forEach(sec => {
         const offset = sec.offsetTop - 200;
@@ -22,9 +24,11 @@ window.addEventListener("scroll", () => {
 });
 
 // ✅ IMPORTANT FIX
-window.onload = () => {
+window.onload = function () {
     typeEffect();
 
-    // Make ALL sections visible initially
-    sections.forEach(sec => sec.classList.add("show"));
+    // Show all sections initially (so nothing is hidden)
+    sections.forEach(sec => {
+        sec.classList.add("show");
+    });
 };
