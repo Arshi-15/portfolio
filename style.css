@@ -115,3 +115,11 @@ section.show {
         gap: 10px;
     }
 }
+#contact a {
+    color: #ffd369;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
