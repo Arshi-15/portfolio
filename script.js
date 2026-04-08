@@ -9,9 +9,10 @@ function typeEffect() {
     }
 }
 
-window.onload = typeEffect;
+// SELECT sections
 const sections = document.querySelectorAll("section");
 
+// SCROLL animation
 window.addEventListener("scroll", () => {
     sections.forEach(sec => {
         const top = window.scrollY;
@@ -22,3 +23,11 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+// ✅ FIX: combine everything in ONE onload
+window.onload = () => {
+    typeEffect(); // typing effect
+
+    // show all sections initially
+    sections.forEach(sec => sec.classList.add("show"));
+};
