@@ -9,25 +9,22 @@ function typeEffect() {
     }
 }
 
-// SELECT sections
 const sections = document.querySelectorAll("section");
 
-// SCROLL animation
 window.addEventListener("scroll", () => {
     sections.forEach(sec => {
-        const top = window.scrollY;
         const offset = sec.offsetTop - 200;
 
-        if (top > offset) {
+        if (window.scrollY > offset) {
             sec.classList.add("show");
         }
     });
 });
 
-// ✅ FIX: combine everything in ONE onload
+// ✅ IMPORTANT FIX
 window.onload = () => {
-    typeEffect(); // typing effect
+    typeEffect();
 
-    // show all sections initially
+    // Make ALL sections visible initially
     sections.forEach(sec => sec.classList.add("show"));
 };
