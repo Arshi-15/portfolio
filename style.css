@@ -60,9 +60,13 @@ header span {
 
 /* BUTTON */
 .btn {
-    display: inline-block;
+    display: inline-flex;   /* change this line */
+    align-items: center;    /* add this */
+    gap: 8px;               /* add this */
+
     margin-top: 30px;
-    padding: 12px 25px;
+    font-size: 1rem;
+    padding: 14px 30px;
     background: #ffd369;
     color: black;
     border-radius: 25px;
@@ -74,6 +78,7 @@ header span {
 .btn:hover {
     background: white;
     transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255,255,255,0.4);
 }
 
 /* SECTIONS WITH ANIMATION */
