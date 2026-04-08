@@ -5,11 +5,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* BODY */
 body {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
 }
 
+/* NAVBAR */
 nav {
     display: flex;
     justify-content: center;
@@ -30,6 +32,7 @@ nav a:hover {
     color: #ffd369;
 }
 
+/* HEADER */
 header {
     text-align: center;
     padding: 100px 20px;
@@ -48,15 +51,26 @@ header span {
     font-size: 1.3rem;
 }
 
+/* SECTIONS (Animation Applied) */
 section {
     padding: 60px 20px;
     text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s;
 }
 
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HEADINGS */
 h2 {
     margin-bottom: 25px;
 }
 
+/* CARD DESIGN */
 .card {
     background: rgba(255,255,255,0.1);
     margin: 20px auto;
@@ -72,6 +86,7 @@ h2 {
     transform: translateY(-12px) scale(1.03);
 }
 
+/* SKILLS */
 .skills span {
     display: inline-block;
     margin: 10px;
@@ -80,27 +95,41 @@ h2 {
     border-radius: 25px;
 }
 
+/* PROJECT STATUS */
 .status {
     color: #ffd369;
 }
 
+/* CONTACT LINKS */
+#contact a {
+    color: #ffd369;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* FORCE CONTACT VISIBLE (fix for your issue) */
+#contact {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* LIST ALIGNMENT */
+.card ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
     background: rgba(0,0,0,0.3);
 }
-section {
-    padding: 60px 20px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 0.8s;
-}
 
-section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .card {
         width: 90%;
@@ -114,16 +143,4 @@ section.show {
         flex-direction: column;
         gap: 10px;
     }
-}
-#contact a {
-    color: #ffd369;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-#contact {
-    padding: 60px 20px;
-    text-align: center;
 }
